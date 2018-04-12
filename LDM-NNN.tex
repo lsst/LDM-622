@@ -8,9 +8,9 @@
 \title[DM QA WG]{Data Management QA Strategy Working Group Charge}
 
 \author{John D. Swinbank}
-\setDocRef{\lsstDocNum}
+\setDocRef{\lsstDocType-\lsstDocNum}
 \setDocDate{\vcsDate}
-\setDocUpstreamLocation{\url{https://github.com/lsst/\lsstDocNum}}
+\setDocUpstreamLocation{\url{https://github.com/lsst/\lsstDocType-\lsstDocNum}}
 
 \setDocAbstract{This is the charge for Data Management QA Strategy Working
 Group, to be convened in April 2018.}
@@ -18,7 +18,124 @@ Group, to be convened in April 2018.}
 \begin{document}
 \maketitle
 
-Body.
+\section{Scope}
+
+This working group (WG) is charged with defining the plan for ``quality
+assurance'' (QA) within the Data Management Subsystem.
+
+For the purposes of this WG, we identify the scope of QA as the following:
+
+\begin{itemize}
+
+  \item{Providing developers and commissioners of the LSST Science Pipelines
+  with tooling and datasets which will enable them to identify, understand and
+  resolve --- or avoid altogether, where possible --- algorithmic issues or
+  pathologies.}
+
+  \item{Providing mechanisms by which the Science Pipelines are verified to
+  run on Data Facility-provided hardware at a scale appropriate to demonstrate
+  their readiness for operations.}
+
+  \item{Tracking progress relative to numerical algorithmic performance
+  targets as defined in \citeds{LSE-61} or other DM requirements
+  documents\footnote{We deliberately avoid the term ``key performance
+  metric'', since existing KPMs (described in \citeds {LDM-502}) are
+  ill-defined, presupposing as they do the existence of a complete LSST
+  system before it is available.}.}
+
+  \item{Tracking computational performance and enabling the rapid
+  identification of performance regressions.}
+
+\end{itemize}
+
+Explicitly excluded from this scope are:
+
+\begin{itemize}
+
+  \item{General purpose ``science validation'' activities, which will be
+  separately coordinated by the DM Subsystem Scientist.}
+
+  \item{Usability or other general-purpose improvements to the codebase.}
+
+  \item{Testing of other parts of the DM Subsystem deliverables, including but
+  not limited to Data Facility systems, large scale databases, or the Science
+  Platform, except in so far as their availability may be necessary to carry
+  out QA tasks on the Science Pipelines.}
+
+\end{itemize}
+
+Note that this WG is not charged with delivering tools explicitly designed for
+use by the Commissioning Team. It is anticipated that their needs overlap in
+large part with those of DM developers, but a separate requirements gathering
+exercise, likely conducted in conjunction with the DM Subsystem
+Scientist\footnote{And/or DM Validation Scientist, as and when one is
+appointed}, may be necessary to address Commissioning. However, the DM
+representative to the Commissioning Team, Simon Krughoff, is expected to serve
+on this WG (see \S\ref{sec:members}) to ensure that the overall direction of
+travel is aligned with the expectations of commissioning.
+
+\section{Period}
+\label{sec:period}
+
+The working group will convene before the end of April 2018. Its remit will
+expire, and deliverables must be provided, by the end of June 2018.
+
+\section{Responsibilities}
+
+This WG has the following responsibilities:
+
+\begin{itemize}
+
+  \item{Collect input from stakeholders, including the DM System Science Team,
+  Science Pipelines Leadership Team, DM Developers, and DM Systems Engineering
+  Team, to develop a collection of QA use cases.}
+
+  \item{Map those use cases to existing QA tools or procedures within DM,
+  where possible, and identify where new tools or procedures need to be
+  developed.}
+
+  \item{Develop requirements documentation covering all tools or procedures,
+  new or existing, identified above.}
+
+  \item{Produce a list of datasets which should be curated in support of QA
+  activities, and develop a strategy for the management of those datasets.}
+
+  \item{Propose a development plan for delivering the required tools,
+  procedures and datasets for consideration by DM Project Management.}
+
+\end{itemize}
+
+\section{Organization}
+
+\subsection{Meetings and Activities}
+
+The WG will have a scheduled weekly meeting. Other meetings may be called by
+the chair on an ad hoc basis.
+
+Members are expected to reserve several hours per week for WG activities.
+
+\subsection{Reporting}
+
+The WG chair will report on WG activities to the DM Project Manger weekly.
+
+At the conclusion of the WG (\S\ref{sec:period}), a brief summary report and
+the collection of uses cases and requirements documentation will be presented
+to the DM Leadership Team for acceptance.
+
+\subsection{Membership (Proposed)}
+\label{sec:members}
+
+\begin{itemize}
+
+  \item{John Swinbank (Chair; Alert Production \& System Management)}
+  \item{Simon Krughoff (SQuaRE)}
+  \item{Eric Bellm (Alert Production)}
+  \item{Tim Morton (Data Release Production)}
+  \item{Lauren MacArthur (Data Release Production)}
+  \item{Hsin-Fang Chiang (LSST Data Facility)}
+  \item{A TBD delegate from the SUIT team}
+
+\end{itemize}
 
 \input{refs}
 \end{document}
