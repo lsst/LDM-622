@@ -98,10 +98,49 @@ This WG has the following responsibilities:
   new or existing, identified above.}
 
   \item{Produce a list of datasets which should be curated in support of QA
-  activities, and develop a strategy for the management of those datasets.}
+  activities, and develop a strategy for the management of those
+  datasets\footnote{Where possible, datasets should be as specific as
+  possible, but the WG may also suggest certain \textit{types} of dataset
+  which should be compiled after the WG has been completed.}.}
 
   \item{Propose a development plan for delivering the required tools,
   procedures and datasets for consideration by DM Project Management.}
+
+\end{itemize}
+
+\section{Specific Considerations}
+
+Topics for discussion by the WG should include, but are not limited to:
+
+\begin{itemize}
+
+  \item{To what extent can all interactive QA use cases be captured within the
+  framework of the Science Platform? On what timescale will that be available
+  in a form that is useful to Pipelines developers?}
+
+  \item{At what granularity and cadence are integration tests required? Can
+  these be scheduled automatically, e.g. by Jenkins, or do they require manual
+  intervention for large scale tests?}
+
+  \item{Current thinking has Firefly as LSST's primary image visualization
+  tool during operations and (presumably) commissioning, but direct support of
+  Pipelines developers is outside its scope. Do we need additional tooling
+  here? Is Firefly's existing development plan adequate to DM's needs? Must
+  the scope of Firefly development be extended?}
+
+  \item{What is the form of metrics that will be captured by the SQuaSH system
+  \citeds{SQR-009}?}
+
+  \item{How should pipelines be instrumented to supply those metrics (see e.g.
+  \citeds{DMTN-057})?}
+
+  \item{By what mechanism is a regularly updated pipeline output dataset made
+  available for test purposes (\jira{RFC-249})? How does it relate to other
+  dataset packages, and to making test data available to developers?}
+
+  \item{By what mechanism, if any, can users ``drill down'' from SQuaSH to
+  detailed analysis of processing results? Which tools will be provided within
+  the drill-down environment to help?}
 
 \end{itemize}
 
