@@ -1,5 +1,5 @@
 DOCTYPE = LDM
-DOCNUMBER = NNN
+DOCNUMBER = 622
 DOCNAME = $(DOCTYPE)-$(DOCNUMBER)
 
 GITVERSION := $(shell git log -1 --date=short --pretty=%h)
