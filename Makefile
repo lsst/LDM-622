@@ -11,11 +11,11 @@ endif
 
 export TEXMFHOME = lsst-texmf/texmf
 
-$(DOCNAME).pdf: doc.tex meta.tex
-	xelatex -jobname=$(DOCNAME) doc.tex
+$(DOCNAME).pdf: $(DOCNAME).tex meta.tex
+	xelatex -jobname=$(DOCNAME) $(DOCNAME).tex
 	bibtex $(DOCNAME)
-	xelatex -jobname=$(DOCNAME) doc.tex
-	xelatex -jobname=$(DOCNAME) doc.tex
+	xelatex -jobname=$(DOCNAME) $(DOCNAME).tex
+	xelatex -jobname=$(DOCNAME) $(DOCNAME).tex
 
 .FORCE:
 
